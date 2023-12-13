@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #bdc3c7;
+        }
+
+        th {
+            background-color: #828282;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Web Page</h1>
+    </header>
+
+    <section>
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is the content of column 1.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is the content of column 2.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>This is the content of column 3.</p>
+        </div>
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2023 Web Page</p>
+    </footer>
+</body>
+</html>
