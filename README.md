@@ -2,3 +2,4 @@
 upload the discription of games
 represent the similar games to it
 # Activities for Islem
+<!--create the categories of games-->
