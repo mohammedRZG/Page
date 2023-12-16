@@ -15,6 +15,9 @@ jobs:
 
             - name: Deploy to GitHub Pages
               run: |
+                  mkdir gh-pages
+                  mv index.html gh-pages/
+                  cd gh-pages
                   git config user.name "${{ github.actor }}"
                   git config user.email "${{ github.actor }}@users.noreply.github.com"
                   git checkout main
