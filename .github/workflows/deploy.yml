@@ -1,10 +1,8 @@
 name: Deploy
-
 on:
     push:
         branches:
             - main
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -18,16 +16,12 @@ jobs:
                   git config user.name "${{ github.actor }}"
                   git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-                  # Create a new branch 'gh-pages' or switch to it if it already exists
                   git branch -D gh-pages || true
                   git checkout -b gh-pages
-
                   # Add the HTML file (modify the filename if needed)
                   git add page.html
 
-                  # Commit and force-push to the 'gh-pages' branch
                   git commit -m "Deploy to GitHub Pages"
                   git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
 
-                  # Switch back to the 'main' branch
                   git checkout main
