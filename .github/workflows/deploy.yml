@@ -17,9 +17,17 @@ jobs:
               run: |
                   git config user.name "${{ github.actor }}"
                   git config user.email "${{ github.actor }}@users.noreply.github.com"
-                  git checkout main
-                  git branch -D gh-pages  # Delete existing gh-pages branch
+
+                  # Create a new branch 'gh-pages' or switch to it if it already exists
+                  git branch -D gh-pages || true
                   git checkout -b gh-pages
-                  git add page.html  # Add your HTML file or adjust as needed
+
+                  # Add the HTML file (modify the filename if needed)
+                  git add page.html
+
+                  # Commit and force-push to the 'gh-pages' branch
                   git commit -m "Deploy to GitHub Pages"
                   git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
+
+                  # Switch back to the 'main' branch
+                  git checkout main
