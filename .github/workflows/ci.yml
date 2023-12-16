@@ -1,0 +1,23 @@
+name: CI
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+
+            - name: Check HTML file
+              run: |
+                  if [ -e index.html ]; then
+                    echo "HTML file exists!"
+                  else
+                    echo "Error: HTML file not found!"
+                    exit 1
+                  fi
