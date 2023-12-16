@@ -15,7 +15,7 @@ jobs:
 
             - name: Check HTML file
               run: |
-                  if [ -e index.html ]; then
+                  if [ -e page.html ]; then
                     echo "HTML file exists!"
                   else
                     echo "Error: HTML file not found!"
